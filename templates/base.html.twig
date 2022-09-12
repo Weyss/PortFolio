@@ -1,19 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}
+            Cédric JANATI-IDRISSI
+			{% endblock %}
+		</title>
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+	</head>
+	<body>
+		<header>
+			<h1>Cédric JANATI-IDRISSI</h1>
+			<img src="{{ asset('img/presentation.jpg') }}" alt="Image de fond illustrant ma passion pour le web">
+			<span>Développeur Web & Web Mobile FullStack</span>
+			<nav>
+				<ul>
+					<li><a href="#aboutme">A propos</a></li>
+					<li><a href="#project">Projets</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id="aboutme">
+			<h2>A propos de moi</h2>
+            <img src="{{ asset('img/photo.jpg') }}" alt="Une photo de moi-même">
+			<article>
+				<h3>Me concernant</h3>
+				<p>De windows 95 à Windows 10, des forums aux réseaux sociaux, des disquettes aux clés USB, aussi bien en hardware qu'en software, 
+                depuis ma plus tendre enfance j'ai connu l'évolution de l'informatique.
+                Ce qui m'as le plus intrigué et émerveillé c'est le web. Voir les sites d'époques et les sites d'aujourd'hui à été une source de curiosité sur la manière
+                dont ils sont créé. Par la suite je me suis mis à apprendre en auto-didact les langages du front avant de suivre une formation.
+                Depuis mon diplôme, je ne cesse de vouloir découvrir de nouvelles choses.</p>
+			</article>
+			<article>
+				<h3>Mes Formations</h3>
+                <div>
+                    <h4>Titre Professionnel Développeur Web & Web Mobile</h4>
+                    <span>CCI Digne-les-bains</span>
+                    <span>Digne-les-bains</span>
+                </div>
+                <div>
+                    <h4>BTS Hôtellerie / Restauration</h4>
+                    <span>Lycée Professionnel Hôtellerie / Restauration Paul Augier</span>
+                    <span>Nice</span>
+                </div>
+                <div>
+                    <h4>BAC Hôtellerie / Restauration</h4>
+                    <span>Lycée Professionnel Hôtellerie / Restauration Paul Augier</span>
+                    <span>Nice</span>
+                </div>
+			</article>
+			<article>
+				<h3>Mes Connaissances</h3>
+                <h4>Langages de programmation & outils</h4>
+                <img src="{{ asset('img/visualstudiocode.png') }}" alt="Logo Visual Studio Code">
+                <img src="{{ asset('img/html.png') }}" alt="Logo HTML 5">
+                <img src="{{ asset('img/css.png') }}" alt="Logo CSS 3">
+                <img src="{{ asset('img/javascript.png') }}" alt="Logo JavaScript">
+                <img src="{{ asset('img/php.png') }}" alt="Logo pHp">
+                <img src="{{ asset('img/mysql.png') }}" alt="Logo MySQL">
+                <img src="{{ asset('img/bootstrap.png') }}" alt="Logo BootStrap">
+                <img src="{{ asset('img/symfony.png') }}" alt="Logo Symfony">
+                <img src="{{ asset('img/git.png') }}" alt="Logo Git">
+                <h4>WorkFlow</h4>
+                <ul>
+                    <li>Mobile-First, Design Responsive</li>
+                    <li>Test Unitaire & Fonctionnel</li>
+                    <li>Versionning</li>
+                </ul>
+			</article>
+		</section>
+		<section id="project">
+			<h2>Mes Projets</h2>
+            {# Boucler sur les articles pour récupérer les projets en DB #}
+			<article>
+				<h3>Titre du projet</h3>
+				<img src="" alt="">
+				<p>Description du projet</p>
+				<a href="">Lien vers le projet</a>
+			</article>
+		</section>
+		<footer>
+			<a href="https://github.com/Weyss"><img src="{{ asset('img/github.png') }}" alt="Icône GitHub"></a>
+			<a href="https://www.linkedin.com/in/cédric-janati-idrissi-7461521a3/"><img src="{{ asset('img/linkedin.png') }}" alt="Icône LinkedIn"></a>
+			<span>Copyright © PortFolio Cédric JANATI-IDRISSI 2022</span>
+		</footer>
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</body>
 </html>
