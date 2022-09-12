@@ -131,14 +131,4 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-body header {
-  height: 68vw;
-}
-body header img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=reset.css.map */
