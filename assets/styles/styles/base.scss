@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use '../config/' as config;
+
+/******* GENERAL ********/
+body{
+    @media screen and (min-width: map.get(config.$media, 'sm')){
+        display: grid;
+        grid-gap:15px
+    }
+}
+
+a{
+    text-decoration: none;
+}

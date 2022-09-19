@@ -13,63 +13,78 @@
 	</head>
 	<body>
 		<header>
-			<h1>Cédric JANATI-IDRISSI</h1>
-			<img src="{{ asset('img/presentation.jpg') }}" alt="Image de fond illustrant ma passion pour le web">
-			<span>Développeur Web & Web Mobile FullStack</span>
 			<nav>
 				<ul>
 					<li><a href="#aboutme">A propos</a></li>
 					<li><a href="#project">Projets</a></li>
 				</ul>
+				<button class="hamburger hamburger--vortex" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
 			</nav>
+			<div id="me">
+				<h1>Cédric JANATI-IDRISSI</h1>
+				<span>Développeur Web & Web Mobile FullStack</span>
+			</div>
+			<img id="presentation" src="{{ asset('img/arplan.png') }}" alt="Image de fond illustrant ma passion pour le web">
 		</header>
 		<section id="aboutme">
-			<h2>A propos de moi</h2>
-            <img src="{{ asset('img/photo.jpg') }}" alt="Une photo de moi-même">
-			<article>
-				<h3>Me concernant</h3>
-				<p>De windows 95 à Windows 10, des forums aux réseaux sociaux, des disquettes aux clés USB, aussi bien en hardware qu'en software, 
-                depuis ma plus tendre enfance j'ai connu l'évolution de l'informatique.
-                Ce qui m'as le plus intrigué et émerveillé c'est le web. Voir les sites d'époques et les sites d'aujourd'hui à été une source de curiosité sur la manière
-                dont ils sont créé. Par la suite je me suis mis à apprendre en auto-didact les langages du front avant de suivre une formation.
-                Depuis mon diplôme, je ne cesse de vouloir découvrir de nouvelles choses.</p>
-			</article>
-			<article>
-				<h3>Mes Formations</h3>
-                <div>
-                    <h4>Titre Professionnel Développeur Web & Web Mobile</h4>
-                    <span>CCI Digne-les-bains</span>
-                    <span>Digne-les-bains</span>
-                </div>
-                <div>
-                    <h4>BTS Hôtellerie / Restauration</h4>
-                    <span>Lycée Professionnel Hôtellerie / Restauration Paul Augier</span>
-                    <span>Nice</span>
-                </div>
-                <div>
-                    <h4>BAC Hôtellerie / Restauration</h4>
-                    <span>Lycée Professionnel Hôtellerie / Restauration Paul Augier</span>
-                    <span>Nice</span>
-                </div>
-			</article>
-			<article>
-				<h3>Mes Connaissances</h3>
-                <h4>Langages de programmation & outils</h4>
-                <img src="{{ asset('img/visualstudiocode.png') }}" alt="Logo Visual Studio Code">
-                <img src="{{ asset('img/html.png') }}" alt="Logo HTML 5">
-                <img src="{{ asset('img/css.png') }}" alt="Logo CSS 3">
-                <img src="{{ asset('img/javascript.png') }}" alt="Logo JavaScript">
-                <img src="{{ asset('img/php.png') }}" alt="Logo pHp">
-                <img src="{{ asset('img/mysql.png') }}" alt="Logo MySQL">
-                <img src="{{ asset('img/bootstrap.png') }}" alt="Logo BootStrap">
-                <img src="{{ asset('img/symfony.png') }}" alt="Logo Symfony">
-                <img src="{{ asset('img/git.png') }}" alt="Logo Git">
-                <h4>WorkFlow</h4>
-                <ul>
-                    <li>Mobile-First, Design Responsive</li>
-                    <li>Test Unitaire & Fonctionnel</li>
-                    <li>Versionning</li>
-                </ul>
+            <img class="photo" src="{{ asset('img/photo.jpg') }}" alt="Une photo de moi-même">
+			<article class="splide" aria-label="Splide About Me">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide aboutme">
+							<h3>Me concernant</h3>
+							<p>De windows 95 à Windows 10, des forums aux réseaux sociaux, des disquettes aux clés USB, aussi bien en hardware qu'en software, 
+							depuis ma plus tendre enfance j'ai connu l'évolution de l'informatique.
+							Ce qui m'as le plus intrigué et émerveillé c'est le web. Voir les sites d'époques et les sites d'aujourd'hui à été une source de curiosité sur la manière
+							dont ils sont créé. Par la suite je me suis mis à apprendre en auto-didact les langages du front avant de suivre une formation.
+							Depuis mon diplôme, je ne cesse de vouloir découvrir de nouvelles choses.</p>
+						</li>
+						<li class="splide__slide education">
+							<h3>Mes Formations</h3>
+								<div>
+									<h4>Titre Professionnel Développeur Web & Web Mobile</h4>
+									<span>CCI Digne-les-bains</span>
+									<span>Digne-les-bains</span>
+								</div>
+								<div>
+									<h4>BTS Hôtellerie / Restauration</h4>
+									<span>Lycée Professionnel Hôtellerie / Restauration Paul Augier</span>
+									<span>Nice</span>
+								</div>
+								<div>
+									<h4>BAC Hôtellerie / Restauration</h4>
+									<span>Lycée Professionnel Hôtellerie / Restauration Paul Augier</span>
+									<span>Nice</span>
+								</div>
+						</li>
+						<li class="splide__slide skills">
+							<h3>Mes Connaissances</h3>
+							<h4>Langages de programmation & outils</h4>
+							<div class="skills-icons">
+								<img src="{{ asset('img/visualstudiocode.png') }}" alt="Logo Visual Studio Code">
+								<img src="{{ asset('img/html.png') }}" alt="Logo HTML 5">
+								<img src="{{ asset('img/css.png') }}" alt="Logo CSS 3">
+								<img src="{{ asset('img/sass.png') }}" alt="Logo BootStrap">
+								<img src="{{ asset('img/bootstrap.png') }}" alt="Logo BootStrap">
+								<img src="{{ asset('img/javascript.png') }}" alt="Logo JavaScript">
+								<img src="{{ asset('img/php.png') }}" alt="Logo pHp">
+								<img src="{{ asset('img/symfony.png') }}" alt="Logo Symfony">
+								<img src="{{ asset('img/mysql.png') }}" alt="Logo MySQL">
+								<img src="{{ asset('img/git.png') }}" alt="Logo Git">
+							</div>
+							<h4>WorkFlow</h4>
+							<ul>
+								<li>Mobile-First, Design Responsive</li>
+								<li>Test Unitaire & Fonctionnel</li>
+								<li>Versionning</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</article>
 		</section>
 		<section id="project">

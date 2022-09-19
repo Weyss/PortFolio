@@ -1,21 +1,5 @@
-@use 'sass:map';
-@use 'reset';
-@import 'config';
-
-body {
-    header {
-        height: 68vw;
-
-        img {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            z-index: -1;
-        }
-    }
+/*# sourceMappingURL=app.css.map */
+@use 'styles';
+@use 'components';
 
 
-    @media screen and (min-width: map.get($media, 'sm')) {}
-
-    @media screen and (min-width: map.get($media, 'lg')) {}
-}
