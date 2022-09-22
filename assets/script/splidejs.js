@@ -3,5 +3,10 @@
 import Splide from '@splidejs/splide';
 
 new Splide( '.splide', {
-    height: '25vh'
+    mediaQuery: 'min',
+    height: '42vh',
+    arrows: false,
+    breakpoints: {
+    }
+    
 } ).mount();

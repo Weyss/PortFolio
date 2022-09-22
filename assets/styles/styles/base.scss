@@ -1,14 +1,23 @@
 @use 'sass:map';
-@use '../config/' as config;
+@use '../config/' as *;
 
 /******* GENERAL ********/
 body{
-    @media screen and (min-width: map.get(config.$media, 'sm')){
-        display: grid;
-        grid-gap:15px
-    }
+    font-size: $default-value;
+}
+main{
+    display: grid;
+    grid-template-columns: 3vw 94vw 3vw;
+    background: linear-gradient(180deg, #000c, transparent);
+    row-gap: 30px;
 }
 
 a{
     text-decoration: none;
+}
+
+footer{
+    height: 15vh;
+    margin-top: 10vh;
+    background: linear-gradient(0deg, #000c, transparent);
 }
