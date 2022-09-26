@@ -1,6 +1,4 @@
-@use 'sass:map';
 @use '../config/' as *;
-
 /******* GENERAL ********/
 body{
     font-size: $default-value;
@@ -20,4 +18,10 @@ footer{
     height: 15vh;
     margin-top: 10vh;
     background: linear-gradient(0deg, #000c, transparent);
+    @include breakpoint('sm'){
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

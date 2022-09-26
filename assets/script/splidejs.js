@@ -7,6 +7,8 @@ new Splide( '.splide', {
     height: '42vh',
     arrows: false,
     breakpoints: {
+        576: {
+            height:'75vh'
+        }
     }
-    
 } ).mount();

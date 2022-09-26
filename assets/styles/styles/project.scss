@@ -1,15 +1,12 @@
-@use 'sass:map';
-@use '../config/' as config;
-/*** SECTION PROJECT ****/
+@use '../config/' as *;
+/*** SECTION PROJECT XS-DEVICE ****/
 #project{
     grid-column: 2;
-
     h2{
         text-align: center;
         font-size: 1.7rem;
         margin-bottom: 20px;
     }
-
     article{       
         display: grid;
         grid-template-rows: auto 200px;
@@ -19,26 +16,47 @@
         
         img{
             width: 20rem;
-            border-radius: 50% 20% / 0% 40%;
-            
+            border-radius: 50% 20% / 0% 40%; 
         }
         .infos-project{            
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-    
+
             h3{              
                 font-size: 1.5rem;  
             }
-
             p{
                 font-size: 1.1rem;
                 line-height: 1.2; 
             }
-
             a{  
                 font-size: 1rem;   
             }
         } 
     }
+}
+/*** SECTION PROJECT SM-DEVICE ****/
+@include breakpoint('sm'){
+    #project{
+        h2{
+            font-size: 3rem;
+        }
+        article{
+            img{
+                width: 30rem;
+            }
+            .infos-project{
+                h3{
+                    font-size: 2.3rem;
+                }
+                p{
+                    font-size: 1.3rem;
+                }
+                a{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }  
 }

@@ -1,17 +1,17 @@
+/***** MENU HAMBURGER *****/
 @charset "UTF-8";
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
+//  Hamburgers
+//  @description Tasty CSS-animated hamburgers
+//  @author Jonathan Suh @jonsuh
+//  @site https://jonsuh.com/hamburgers
+//  @link https://github.com/jonsuh/hamburgers
+//  
 
 // Settings
 // ==================================================
 $hamburger-padding-x           : 15px !default;
 $hamburger-padding-y           : 15px !default;
-$hamburger-layer-width         : 40px !default;
+$hamburger-layer-width         : 30px !default;
 $hamburger-layer-height        : 4px !default;
 $hamburger-layer-spacing       : 6px !default;
 $hamburger-layer-color         : #000 !default;
@@ -21,10 +21,13 @@ $hamburger-active-layer-color  : $hamburger-layer-color !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
 // Surcharging for xs-device
-$hamburger-padding-x           : 5px;
-$hamburger-padding-y           : 5px;
-$hamburger-layer-width         : 25px;
-$hamburger-layer-spacing       : 4px;
+// $hamburger-padding-x           : 5px;
+// $hamburger-padding-y           : 5px;
+// $hamburger-layer-width         : 25px;
+// $hamburger-layer-spacing       : 4px;
+
+// Surcharging for sm-device
+
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
 // change the value of $hamburger-hover-filter accordingly.
@@ -77,24 +80,15 @@ $hamburger-types: (
 // Surcharging
 // ==================================================
 .hamburger{
-    background-color: rgba(0, 195, 255, 0.70);
-    // padding: 5px 5px;
-    .hamburger-box{
-      width: 25px;
-      height: 25px;
-    }
-
-  @media screen and (min-width: map.get($media, 'lg')) {
-      display: none;
+  &.is-active{
+    background-color: rgba(255, 250, 240, 0.85)
+  }
+  
+  @include breakpoint('lg'){
+    display: none;
   }
 }
-
 
 // Hamburger types
 // ==================================================
 @import '~hamburgers/_sass/hamburgers/types/_vortex';
-
-
-
-
-

@@ -1,6 +1,5 @@
-@use 'sass:map';
-@use '../config/' as config;
-/***** FOOTER *****/
+@use '../config/' as *;
+/***** FOOTER XS-DEVICE *****/
 .links{    
         display: flex;
         justify-content: center;
@@ -17,4 +16,17 @@
     display: block;
     width: 100%;
 }
-
+/***** FOOTER SM-DEVICE *****/
+@include breakpoint('sm'){
+    .links{
+        a{
+            padding: 0 10px;
+        }
+        img{
+            width: 4rem;
+        }
+    }
+    .copyright{
+        font-size: 1.2rem;
+    }
+}

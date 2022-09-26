@@ -1,6 +1,5 @@
-@use 'sass:map';
 @use '../config/' as *;
-/***** HEADER *****/
+/***** HEADER XS-DEVICE *****/
 header {
     display: grid;
     grid-template-rows: repeat(3, auto);
@@ -20,7 +19,7 @@ header {
             align-items: center;
             overflow: hidden;
             transition: height 0.2s ease-out;
-            background-color: rgba(0, 195, 255, 0.85);
+            background-color: rgba(255, 250, 240, 0.85);
             
             li {
                 a { 
@@ -48,8 +47,7 @@ header {
     h1{
         text-align: center;
         font-size: 1.8rem;
-        margin-top: auto;
-        margin-bottom: auto;
+        align-self: center;
         color: floralwhite;
     }
 
@@ -58,5 +56,32 @@ header {
         align-self: center;
         font-size: 1.5rem;
         color: floralwhite;
+    }
+}
+
+/***** HEADER SM-DEVICE *****/
+@include breakpoint('sm'){
+    header {    
+        nav{
+            ul{
+                li{
+                    a{ 
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #me{
+        h1{
+            font-size: 3rem;
+            align-self: start;
+        }
+        
+        span{
+            font-size: 2.5rem;
+            align-self: end;
+        }
     }
 }
