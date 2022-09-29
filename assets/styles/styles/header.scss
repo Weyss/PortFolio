@@ -23,7 +23,7 @@ header {
             
             li {
                 a { 
-                    font-size: 1.3rem;
+                    font-size: rem(20);
                 }
             }     
         }
@@ -46,7 +46,6 @@ header {
     
     h1{
         text-align: center;
-        font-size: 1.8rem;
         align-self: center;
         color: floralwhite;
     }
@@ -54,7 +53,7 @@ header {
     span{
         text-align: center;
         align-self: center;
-        font-size: 1.5rem;
+        font-size: rem(22);
         color: floralwhite;
     }
 }
@@ -66,22 +65,29 @@ header {
             ul{
                 li{
                     a{ 
-                        font-size: 1.8rem;
+                        font-size: rem(29);
                     }
                 }
             }
         }
     }
-
     #me{
         h1{
-            font-size: 3rem;
             align-self: start;
         }
         
         span{
-            font-size: 2.5rem;
+            font-size: rem(36);
             align-self: end;
+        }
+    }
+}
+
+/***** HEADER MD-DEVICE *****/
+@include breakpoint('md'){
+    #me{
+        span{
+            font-size: 2.8rem;
         }
     }
 }

@@ -2,35 +2,34 @@
 /***** SECTION ABOUT ME XS-DEVICE *****/
 #aboutme{
     grid-column: 2;
-    
+
     h3{
-        font-size: 1.5rem;
+        align-self: center;
     }
-    h4{
-        font-size: 1.2rem;
-    }
-    .photo{
-        width: 7rem;
-        clip-path: circle(45%);
-        text-align: center;
-        margin: auto;
-        display: flex;
-        margin-top: 5px;
-        margin-bottom: 5px;
+}
+.photo{
+    width: 7rem;
+    clip-path: circle(45%);
+    text-align: center;
+    margin: auto;
+    display: flex;
+    margin-top: rem(5);
+    margin-bottom: rem(5);
+}
+.splide{
+    height: 47vh;
+    .splide__track{
+        height: 100%
     }
 }
 .aboutme{
     @include flex-align-center;
-    
     p{
-        font-size: 1.1rem;
         line-height: 1.2;
-        
     }
 }
 .education{
-    @include flex-align-center;
-    
+    @include flex-align-center;    
     div{
         display: grid;
         gap: 5px;
@@ -38,7 +37,6 @@
         h4{
             grid-row: 1;
         }
-
         span{
             &:nth-child(2){
                 font-size: 1rem;  
@@ -61,15 +59,15 @@
     }
     h4{
         text-align: center;
-        margin-top: 30px;
-        padding: 10px 0 20px 0;
+        margin-top: rem(30);
+        padding: rem(10) 0 rem(20) 0;
         
     }
     .langage-tool{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 10px;
+        padding: 0 rem(10);
         
         .skills-icons{         
             width: 70%;
@@ -78,7 +76,7 @@
             justify-content: space-evenly;
             
             img{
-                width: 2rem;
+                width: rem(35);
             }
         }
     }
@@ -88,7 +86,7 @@
         
             li{
                 font-size: 0.9rem; 
-                padding: 2.5px 0 2.5px 0;
+                padding: rem(2.5) 0 rem(2.5) 0;
             }
         }
     }
@@ -96,40 +94,28 @@
 
 /***** SECTION ABOUT ME SM-DEVICE *****/
 @include breakpoint('sm'){
-    #aboutme{
-        h3{
-            font-size: 2.2rem;
-        }
-        h4{
-            font-size: 1.4rem;
-        }
-        
+    .splide{
+        height: 80vh;
     }
-    .aboutme{
-        p{
-            font-size: 1.2rem;
-        }
-    } 
     .education{
         align-items: initial;
-        h3{
-            align-self: center;
-        }
-        span{
-            &:nth-child(2){
-                font-size: 1.2rem;  
-            }
-            &:last-child{
-                font-size: 1rem;
-            }
-        }
+        div{
+            span{
+                &:nth-child(2){
+                    font-size: rem(20);  
+                }
+                &:last-child{
+                    font-size: rem(18);
+                }
+            } 
+        }    
     } 
     .skills{
         grid-auto-columns: 50vw 50vw;
         .langage-tool{
             .skills-icons{
                 img{
-                    width: initial;
+                    width: 2.5rem;
                 }
             }
         }
@@ -142,5 +128,51 @@
         }
     }
 }
-    
-    
+/***** SECTION ABOUT ME MD-DEVICE *****/
+@include breakpoint('md') {
+    .splide{
+        height: 30vh;
+    }
+    .photo{
+        width: 10rem;
+    }
+    .aboutme{
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    .education{
+        div{
+            span{
+                &:nth-child(2){
+                    font-size: 1.4rem;  
+                }
+                &:last-child{
+                    font-size: 1.2rem;
+                }
+            }
+        } 
+    }
+    .skills{
+        .langage-tool{
+            .skills-icons{
+                img{
+                    width: 3.2rem;
+                }
+            }
+        }
+        .workflow{
+            ul{
+                li{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    } 
+}
+@include breakpoint('md', 'landscape'){
+    /** Hauteur du Splide en mode paysage pour les téléphones < sm-device **/
+    .splide{
+        height: 80vh;
+    }
+}  

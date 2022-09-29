@@ -11,7 +11,7 @@
 }
 
 .copyright{
-    font-size: 0.7rem;
+    font-size: rem(13);
     text-align: center;
     display: block;
     width: 100%;
@@ -21,9 +21,6 @@
     .links{
         a{
             padding: 0 10px;
-        }
-        img{
-            width: 4rem;
         }
     }
     .copyright{

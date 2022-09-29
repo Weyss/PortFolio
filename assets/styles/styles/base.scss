@@ -1,13 +1,54 @@
 @use '../config/' as *;
 /******* GENERAL ********/
-body{
-    font-size: $default-value;
-}
 main{
     display: grid;
     grid-template-columns: 3vw 94vw 3vw;
     background: linear-gradient(180deg, #000c, transparent);
-    row-gap: 30px;
+    row-gap: 60px;
+}
+
+h1{
+    font-size: rem(29);
+    @include breakpoint('sm'){
+        font-size: rem(46);
+    }
+    @include breakpoint('md'){
+        font-size: 3.5rem;
+    }
+}
+
+h2{
+    font-size: rem(32);
+    @include breakpoint('sm'){
+        font-size: rem(40);
+    }
+    @include breakpoint('md'){
+        font-size: rem(45);
+    }
+}
+
+h3{
+    font-size: rem(25);
+    @include breakpoint('sm'){
+        font-size: rem(32);
+    }
+}
+
+h4{
+    font-size: rem(19);
+    @include breakpoint('sm'){
+        font-size: rem(22);
+    }
+    @include breakpoint('md'){
+        font-size: 1.6rem;
+    }
+}
+
+p{
+    font-size: rem(17);
+    @include breakpoint('sm'){
+        font-size: rem(22);
+    }
 }
 
 a{
@@ -15,13 +56,16 @@ a{
 }
 
 footer{
-    height: 15vh;
-    margin-top: 10vh;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: linear-gradient(0deg, #000c, transparent);
-    @include breakpoint('sm'){
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    @include breakpoint('sm', 'landscape'){
+        height: 100vh;
+    }
+    @include breakpoint('md'){
+        justify-content: end;
+        padding-bottom: rem(30);
     }
 }

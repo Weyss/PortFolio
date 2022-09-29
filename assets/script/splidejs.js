@@ -2,13 +2,8 @@
 
 import Splide from '@splidejs/splide';
 
-new Splide( '.splide', {
-    mediaQuery: 'min',
-    height: '42vh',
+splide = new Splide( '.splide', {
     arrows: false,
-    breakpoints: {
-        576: {
-            height:'75vh'
-        }
-    }
-} ).mount();
+    } 
+)
+.mount();

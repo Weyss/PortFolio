@@ -21,8 +21,15 @@ $media: (
 );
 
 
-@mixin breakpoint($breakpoint) {
-    @media only screen and (min-width: map.get($media, $breakpoint)) {
-        @content;
+@mixin breakpoint($breakpoint, $orientation: 'portrait') {
+    @if $orientation == 'landscape' {
+        @media only screen and (min-width: map.get($media, $breakpoint)) and (orientation: $orientation){
+            @content;
+        } 
+    } @else {
+        @media only screen and (min-width: map.get($media, $breakpoint)){
+            @content;
+        } 
     }
+    
 }
