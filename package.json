@@ -18,7 +18,6 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "@splidejs/splide": "^4.0.17",
         "hamburgers": "^1.2.1"
     }
 }

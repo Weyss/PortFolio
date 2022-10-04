@@ -19,11 +19,13 @@ header {
             align-items: center;
             overflow: hidden;
             transition: height 0.2s ease-out;
-            background-color: rgba(255, 250, 240, 0.85);
-            
+            background: rgba(255, 250, 240, 0.85);
+            list-style: none;
+
             li {
                 a { 
                     font-size: rem(20);
+                    color: rgb(0, 0, 0);
                 }
             }     
         }
@@ -82,12 +84,51 @@ header {
         }
     }
 }
-
 /***** HEADER MD-DEVICE *****/
 @include breakpoint('md'){
     #me{
         span{
-            font-size: 2.8rem;
+            font-size: rem(45);
+        }
+    }
+}
+/***** HEADER LG-DEVICE *****/
+@include breakpoint('lg'){
+    header{
+        nav{
+            top: 25px;
+            right: 340px;
+
+            ul{
+                width: 370px;
+                height: 60px;
+                background: #00000000;
+                overflow: none;
+                transition: none;
+                li{
+                    a{
+                        font-size: rem(40);
+                        color: rgba(255, 250, 240, 0.85);
+                        background: rgba(255, 250, 240, 0);
+                        transition: background 1s ease-in-out;
+                        &:hover{
+                            background: linear-gradient(to right, 
+                                rgb(236, 120, 149), 
+                                rgb(204, 141, 234), 
+                                rgb(98, 187, 234)
+                            );
+                                -webkit-background-clip: text;
+	                            -webkit-text-fill-color: transparent;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+    #me{
+        grid-template-rows: repeat(2, 15rem);
+        span{
+            font-size: rem(75);
         }
     }
 }
