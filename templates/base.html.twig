@@ -34,69 +34,71 @@
 		<main>
 			<section id="aboutme">
 				<img class="photo" src="{{ asset('img/photo.jpg') }}" alt="Une photo de moi-même">
-				<nav>
+				{# <nav>
 					<ul>
 						<li><a href="#resume">Me Concernant</a></li>
 						<li><a href="#skills">Mes Connaissances</a></li>
 						<li><a href="#educations">Mes Formations</a></li>
 					</ul>
-				</nav>
-				<article >
-						<ul>
-							<li id="resume">
-								<h3>Me concernant</h3>
-								<p>De Windows 95 à Windows 10, des disquettes aux clés USB, aussi bien en hardware qu'en software, 
-								depuis ma plus tendre enfance j'ai connu l'évolution de l'informatique.
-								Ce qui m'as le plus intrigué et émerveillé c'est le web. Voir les sites d'époques et les sites d'aujourd'hui à été une source de curiosité sur la manière
-								dont ils sont créés. Par la suite je me suis mis à apprendre en auto-didact les langages du front avant de suivre une formation.
-								Depuis mon diplôme, je ne cesse de vouloir découvrir de nouvelles choses.</p>
-							</li>
-							<li id="skills">
-								<h3>Mes Connaissances</h3>
-								<div class="langage-tool">
-								<h4>Langages de programmation & outils</h4>
-									<div class="skills-icons">
-										<img src="{{ asset('img/visualstudiocode.png') }}" alt="Logo Visual Studio Code">
-										<img src="{{ asset('img/html.png') }}" alt="Logo HTML 5">
-										<img src="{{ asset('img/css.png') }}" alt="Logo CSS 3">
-										<img src="{{ asset('img/sass.png') }}" alt="Logo BootStrap">
-										<img src="{{ asset('img/bootstrap.png') }}" alt="Logo BootStrap">
-										<img src="{{ asset('img/javascript.png') }}" alt="Logo JavaScript">
-										<img src="{{ asset('img/php.png') }}" alt="Logo pHp">
-										<img src="{{ asset('img/symfony.png') }}" alt="Logo Symfony">
-										<img src="{{ asset('img/mysql.png') }}" alt="Logo MySQL">
-										<img src="{{ asset('img/git.png') }}" alt="Logo Git">
-									</div>
+				</nav> #}
+				{# Swiper #}
+				<article class="swiper mySwiper">
+					<ul class="swiper-wrapper">
+						<li id="resume" class="swiper-slide">
+							<h3>Me concernant</h3>
+							<p>De Windows 95 à Windows 10, des disquettes aux clés USB, aussi bien en hardware qu'en software, 
+							depuis ma plus tendre enfance j'ai connu l'évolution de l'informatique.
+							Ce qui m'as le plus intrigué et émerveillé c'est le web. Voir les sites d'époques et les sites d'aujourd'hui à été une source de curiosité sur la manière
+							dont ils sont créés. Par la suite je me suis mis à apprendre en auto-didact les langages du front avant de suivre une formation.
+							Depuis mon diplôme, je ne cesse de vouloir découvrir de nouvelles choses.</p>
+						</li>
+						<li id="skills" class="swiper-slide">
+							<h3>Mes Connaissances</h3>
+							<div class="langage-tool">
+							<h4>Langages de programmation & outils</h4>
+								<div class="skills-icons">
+									<img src="{{ asset('img/visualstudiocode.png') }}" alt="Logo Visual Studio Code">
+									<img src="{{ asset('img/html.png') }}" alt="Logo HTML 5">
+									<img src="{{ asset('img/css.png') }}" alt="Logo CSS 3">
+									<img src="{{ asset('img/sass.png') }}" alt="Logo BootStrap">
+									<img src="{{ asset('img/bootstrap.png') }}" alt="Logo BootStrap">
+									<img src="{{ asset('img/javascript.png') }}" alt="Logo JavaScript">
+									<img src="{{ asset('img/php.png') }}" alt="Logo pHp">
+									<img src="{{ asset('img/symfony.png') }}" alt="Logo Symfony">
+									<img src="{{ asset('img/mysql.png') }}" alt="Logo MySQL">
+									<img src="{{ asset('img/git.png') }}" alt="Logo Git">
 								</div>
-								<div class="workflow">
-									<h4>WorkFlow</h4>
-									<ul>
-										<li>Mobile-First, Design Responsive</li>
-										<li>Test Unitaire & Fonctionnel</li>
-										<li>Versionning</li>
-									</ul>
+							</div>
+							<div class="workflow">
+								<h4>WorkFlow</h4>
+								<ul>
+									<li>Mobile-First, Design Responsive</li>
+									<li>Test Unitaire & Fonctionnel</li>
+									<li>Versionning</li>
+								</ul>
+							</div>
+						</li>
+						<li id="educations" class="swiper-slide">
+							<h3>Mes Formations</h3>
+								<div>
+									<h4>Titre Professionnel Développeur Web & Web Mobile</h4>
+									<span>CCI Digne-les-bains</span>
+									<span>Digne-les-bains</span>
 								</div>
-							</li>
-							<li id="educations">
-								<h3>Mes Formations</h3>
-									<div>
-										<h4>Titre Professionnel Développeur Web & Web Mobile</h4>
-										<span>CCI Digne-les-bains</span>
-										<span>Digne-les-bains</span>
-									</div>
-									<div>
-										<h4>BTS Hôtellerie / Restauration</h4>
-										<span>Lycée Professionnel Hôtellerie / Restauration Paul Augier</span>
-										<span>Nice</span>
-									</div>
-									<div>
-										<h4>BAC Hôtellerie / Restauration</h4>
-										<span>Lycée Professionnel Hôtellerie / Restauration Paul Augier</span>
-										<span>Nice</span>
-									</div>
-							</li>
-						</ul>
-				</article>
+								<div>
+									<h4>BTS Hôtellerie / Restauration</h4>
+									<span>Lycée Professionnel Hôtellerie / Restauration Paul Augier</span>
+									<span>Nice</span>
+								</div>
+								<div>
+									<h4>BAC Hôtellerie / Restauration</h4>
+									<span>Lycée Professionnel Hôtellerie / Restauration Paul Augier</span>
+									<span>Nice</span>
+								</div>
+						</li>
+					</ul>
+					<div class="swiper-pagination"></div>
+				</article>	
 			</section>
 			<section id="project">
 				<h2>Mes Projets</h2>
