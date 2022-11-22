@@ -1,44 +1,57 @@
 'use strict';
 
-import Swiper, { EffectFade, Pagination } from 'swiper';
+import Swiper, { EffectFade, Navigation, Pagination } from 'swiper';
 
-const slide = document.querySelectorAll('.swiper-slide');
-const swiperPagination = document.querySelector('.swiper-pagination')
+const slide = Array.from(document.querySelectorAll('.swiper-slide'));
 const array = ['Me Concernant', 'Connaissances', 'Formations']
 
-for (let i of slide.keys()) {
+slide.forEach((element, index) => {
     const span = document.createElement('span')
-
-    span.setAttribute('class', 'swiper-pagination-custom')
-    span.setAttribute('data-ref', `${slide[i].getAttribute('id')}`)
-    span.innerText = array[i]
+    const swiperPagination = document.querySelector('.swiper-pagination')
+    
+    span.dataset.ref = `${element.getAttribute('id')}`
+    span.innerText = array[index]
     swiperPagination.append(span)
-}
-
+})
 
 const swiper = new Swiper('.mySwiper', {
     // configure Swiper to use modules
-    modules: [Pagination, EffectFade],
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'custom',
-        renderCustom: function (swiper, current, total) {
-            let spanCurrent = swiperPagination.children[current - 1]
-
-            for (let key of slide.keys()) {
-                if (spanCurrent.getAttribute('data-ref') === slide[key].getAttribute('id')) {
-                    spanCurrent.classList.add('js-span-actif')
-                }
-                else if (swiperPagination.children[key] !== spanCurrent
-                    && swiperPagination.children[key].classList.contains('js-span-actif')) {
-                    swiperPagination.children[key].classList.remove('js-span-actif')
-                }
+    modules: [EffectFade, Navigation, Pagination],
+    breakpoints: {
+        0: {
+            navigation: {
+                enabled: false
             }
+        },
+        992: {
+            navigation: {
+                enabled: true,
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         }
     },
     effect: 'fade',
     fadeEffect: {
         crossFade: true
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            const paginationCollection = swiper.pagination.el.children
+            let spanCurrent = paginationCollection[current - 1]
+            
+            for (let index in slide) {
+                if (spanCurrent.dataset.ref === slide[index].getAttribute('id')) {
+                    spanCurrent.classList.add('js-span-actif')
+                }
+                else if (paginationCollection[index] !== spanCurrent
+                    && paginationCollection[index].classList.contains('js-span-actif')) {
+                    paginationCollection[index].classList.remove('js-span-actif')
+                }
+            }
+        }
     },
 });
 
