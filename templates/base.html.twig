@@ -13,6 +13,7 @@
 		{% endblock %}
 	</head>
 	<body>
+		<!-- HEADER -->
 		<header>
 			<nav>
 				<ul>
@@ -35,17 +36,10 @@
 			</div>
 			<img id="presentation" src="{{ asset('img/arpldef.png') }}" alt="Image de fond illustrant ma passion pour le web">
 		</header>
-		<main>
+		{# <main>
 			<section id="aboutme">
 				<img class="photo" src="{{ asset('img/photo.jpg') }}" alt="Une photo de moi-même">
-				{# <nav>
-									<ul>
-										<li><a href="#resume">Me Concernant</a></li>
-										<li><a href="#skills">Mes Connaissances</a></li>
-										<li><a href="#educations">Mes Formations</a></li>
-									</ul>
-								</nav> #}
-				{# Swiper #}
+				<!-- SwiperJS -->
 					<article class="swiper mySwiper"> <ul class="swiper-wrapper">
 						<li id="resume" class="swiper-slide">
 							<h3>Me concernant</h3>
@@ -100,9 +94,9 @@
 							</div>
 						</li>
 					</ul>
-					{# Swiper Pagination #}
+					<!-- Swiper Pagination -->
 					<div class="swiper-pagination"></div>
-					{# Swiper Navigation #}
+					<!-- Swiper Navigation -->
 					<div class="swiper-button-prev"></div>
 					<div class="swiper-button-next"></div>
 				</article>
@@ -142,7 +136,7 @@
 				<a href="https://www.linkedin.com/in/cédric-janati-idrissi-7461521a3/"><img src="{{ asset('img/linkedin.png') }}" alt="Icône LinkedIn"></a>
 			</div>
 			<span class="copyright">Copyright © PortFolio Cédric JANATI-IDRISSI 2022</span>
-		</footer>
+		</footer> #}
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}
