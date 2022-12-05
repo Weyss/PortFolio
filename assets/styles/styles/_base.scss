@@ -70,18 +70,6 @@ a{
     text-decoration: none;
 }
 
-footer{
-    height: 25vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(0deg, #000c, transparent);
-    /** Height property for phone landscape mode **/
-    @include breakpoint('sm', 'landscape'){
-        height: 100vh;
-    }
-    @include breakpoint('md'){
-        justify-content: end;
-        padding-bottom: rem(30);
-    }
+img{
+    width: 100%;
 }
